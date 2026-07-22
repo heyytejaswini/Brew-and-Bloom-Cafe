@@ -1,68 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Brew & Bloom Café</title>
         <link rel="stylesheet" href="style.css">
     </head>
+
     <body>
-        
+        <!-- Header -->
         <header>
+            <!-- Favicon -->
             <img 
                 src="assests/logo.png" 
                 alt="Brew & Bloom Café Logo"
-                height ="50px"
-                width="50px">
-            <h1 class="h1header">Brew & Bloom Café</h1>   
-            <button class="login-button">Login</button>
+                height ="70px"
+                width="70px"
+                class="favicon">
+            <h1 class="brandname">Brew & Bloom Café</h1>
+            <button onclick="document.getElementById('id01').style.display='block'" class="login">Login</button>
         </header>
-        <marquee>SALE IS LIVE!</marquee>
 
+        <!-- Login Modal -->
+         <section class="loginpage">
+            
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/login" method="post">
+                    <div class="container">
+                        <h2>Create an account</h2>
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+                        <label for="password"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="password" required><br><br>
+
+                        <button type="submit">Login</button><br><br>
+                        <div class="login-footer">
+                            <label> 
+                                <input type="checkbox" checked="checked" name="remember">Remember me
+                            </label>
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbutton">Cancel</button>
+                        </div>
+                    </div> 
+                </form>
+            </div>
+         </section>
+        
         <!-- Navigation bar-->
-         <nav class="navbar">
-            <p>Home</p>
-            <p>Profile</p>
-            <p>Menu</p>
-            <p>Cart & Checkout</p>
-            <p>Track Order</p>
-            <p>Community & Events</p>
-            <p>Customer Feedback</p>
-            <p>Admin</p>
-         </nav>
+        <nav class="navbar">
+            <button class="tablink" onclick="openpage(Home)">Menu</button>
+            <button class="tablink">Events</button>
+        </nav>
+        
+        <!--Main Content-->
+        <main>
+            <section class="hero">
 
-    
-    <!--Main Content-->
-    <main>
-        <section class="hero">
-            <div class="left">
-                <img
-                    src="assests/drink.png"
-                    alt="Promo Drink"
-                    height="500px">
-            </div>
-            <div class="middle">
-                
+                <div class="left">
+                    <img
+                        src="assests/drink.png"
+                        alt="Promo Drink"
+                        height="500px">
+                </div>
+            
+                <div class="middle">
+                </div>
 
-            </div>
-            <div class="right">
-                <img 
-                    src="assests/logo.png"
-                    alt="Brew & Bloom Café Logo">
+                <div class="right">
+                    <img 
+                        src="assests/logo.png"
+                        alt="Brew & Bloom Café Logo"
+                        height="350px"
+                        class="mascot">
+                </div>
+            </section>
+        </main>
 
-            </div>
-        </section>
-    </main>
+        <!--Footer-->
+        <footer class="footer-top">
+            <p>Brew & Bloom Café</p>
+        </footer>
 
-    <!--Footer-->
-    <footer class="footer-bottom" bgcolor="37CBFE9">
-        <p>© 2026 Brew & Bloom Café. All rights reserved.</p>
-        <p>Designed by Tejaswini</p>
-    </footer>
-
-    <footer class="footer-top" bgcolor="F0A3C2">
-        <p>Brew & Bloom Café</p>
-    </footer>
-
+        <footer class="footer-bottom" >
+            <p>© 2026 Brew & Bloom Café. All rights reserved.</p>
+            <p>Designed by Tejaswini</p>
+        </footer>
+        <script src="script.js"></script>
     </body>     
 </html>

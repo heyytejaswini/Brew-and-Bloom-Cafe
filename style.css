@@ -2,20 +2,41 @@
     box-sizing: border-box;
 }
 
+@font-face{
+    font-family: "blue-ocean";
+    src: url(assests/BLUE-OCEAN.ttf);
+}
+@font-face{
+    font-family:"twilight";
+    src:url(assests/Twilight-Luminance-Free.ttf);
+}
+@font-face{
+    font-family:"amarillo";
+    src: url(assests/Amarillo.ttf);
+}
+@font-face{
+    font-family:"latenza";
+    src: url(assests/LatenzaScript_PERSONAL_USE_ONLY.otf);
+}
+@font-face{
+    font-family:"avenue";
+    src: url(assests/Avenue-de-Madison.ttf);
+}
+
+.favicon{
+    margin: 10px;
+}
+
 header
 {
+    background-color:#FFFFFF;
     display: flex;
-    justify-content: space-between;
-}
-.brandname
-{
-    text-align: center;
-
+    justify-content:space-between;
 }
 
-.h1header
-{
-    text-align:center;
+.brandname{
+    font-size:40px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 .navbar
@@ -24,6 +45,7 @@ header
     display: flex;
     justify-content: space-between;
 }
+
 body
 {
     margin: 0;
@@ -31,40 +53,104 @@ body
         radial-gradient(
             circle,
             #7CBFE9,
-            transparent 75%),
+            transparent 95%),
             #FFFFFF;
         
 }
 
-.hero
+.loginpage
 {
+    /* text-align:right; */
+    button
+    {
+        background-color:#B6E3FF;
+        padding: 10px 20px;
+        font-size:large;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        cursor:pointer;
+        width:100%;
+    }
+    
+    button:hover{
+        border:none;
+        opacity:0.8;
+    }
+
+    /* cancle button */
+    .cancelbutton{
+        background-color:#F0A3C2;
+        width: auto;
+    }
+
+    .container {
+        padding:40px; /*the distance between the content and the popup*/
+    }
+
+    .modal /*the background when it opens*/
+    {
+        display:none;/*hidden by default*/
+        position:fixed;/*stay in place*/
+        top: 0;
+        width:100%;
+        height:100%;
+        padding-top:60px;
+        overflow: auto; /*enable scroll if needed*/
+        background-color:rgba(0,0,0,0.4); /* black background with opacity*/
+    }
+
+    .modal-content
+    {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto; /*5% from the top, 15% from the bottom and centered*/
+        width: 70%; /*to look like a box and away from the sides equally*/
+
+    }
+
+    .login-footer{
+        display:flex;
+        justify-content: space-between;
+    }
+}
+
+.login{
+    width:auto;
+    background-color:#B6E3FF;
+    padding: 0 40px;
+    font-size:large;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor:pointer;
+    margin: 20px 40px 20px 0;
+}
+.hero{
     display:flex;
 }
-.right
-{
-    margin:20px;
-    width:100%;
-    text-align: right;
-    padding-top: 150px;
-}
 
-.middle
-{
-    width:100%;
-}
-
-.left
-{
+.left{
     text-align:left;
 }
-.login-button
-{
-    margin: 10px;
-    padding:10px;
+
+.middle{
+    width:100%;
 }
-.footer-bottom
-{
-    position:fixed;
+
+.right{
+    margin:20px;
+    text-align: right;
+}
+
+.mascot{
+    margin: 20px;
+}
+
+.footer-top{
+    padding:10px;
+    background-color: #F0A3C2;
+    text-align:center;
+}
+
+.footer-bottom{
+    background-color: #7CBFE9;
+    position:relative;
     bottom:0;
     text-align:center;
     width: 100%;
@@ -72,9 +158,4 @@ body
     justify-content: space-between;
     padding: 0 20px;
 
-}
-
-.footer-top
-{
-    text-align:center;
 }
